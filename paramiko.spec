@@ -4,7 +4,7 @@
 #
 Name     : paramiko
 Version  : 1.15.2
-Release  : 10
+Release  : 11
 URL      : https://pypi.python.org/packages/source/p/paramiko/paramiko-1.15.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/paramiko/paramiko-1.15.2.tar.gz
 Summary  : SSH2 protocol library
