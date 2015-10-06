@@ -4,7 +4,7 @@
 #
 Name     : paramiko
 Version  : 1.15.3
-Release  : 12
+Release  : 13
 URL      : https://pypi.python.org/packages/source/p/paramiko/paramiko-1.15.3.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/paramiko/paramiko-1.15.3.tar.gz
 Summary  : SSH2 protocol library
