@@ -4,7 +4,7 @@
 #
 Name     : paramiko
 Version  : 2.0.2
-Release  : 20
+Release  : 21
 URL      : http://pypi.debian.net/paramiko/paramiko-2.0.2.tar.gz
 Source0  : http://pypi.debian.net/paramiko/paramiko-2.0.2.tar.gz
 Summary  : SSH2 protocol library
