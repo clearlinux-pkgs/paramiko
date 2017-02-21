@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : paramiko
-Version  : 2.1.1
-Release  : 23
-URL      : http://pypi.debian.net/paramiko/paramiko-2.1.1.tar.gz
-Source0  : http://pypi.debian.net/paramiko/paramiko-2.1.1.tar.gz
-Source99 : http://pypi.debian.net/paramiko/paramiko-2.1.1.tar.gz.asc
+Version  : 2.1.2
+Release  : 24
+URL      : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz
+Source0  : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz
+Source99 : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz.asc
 Summary  : SSH2 protocol library
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -50,11 +50,11 @@ python components for the paramiko package.
 
 
 %prep
-%setup -q -n paramiko-2.1.1
+%setup -q -n paramiko-2.1.2
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487206815
+export SOURCE_DATE_EPOCH=1487701840
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -64,7 +64,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python test.py
 %install
-export SOURCE_DATE_EPOCH=1487206815
+export SOURCE_DATE_EPOCH=1487701840
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
