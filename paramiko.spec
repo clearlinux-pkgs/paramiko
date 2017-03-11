@@ -6,7 +6,7 @@
 #
 Name     : paramiko
 Version  : 2.1.2
-Release  : 24
+Release  : 25
 URL      : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz
 Source0  : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz
 Source99 : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz.asc
@@ -14,11 +14,12 @@ Summary  : SSH2 protocol library
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: paramiko-python
+Requires: cryptography
+Requires: pyasn1
 BuildRequires : cffi
 BuildRequires : cryptography
 BuildRequires : ecdsa
 BuildRequires : ecdsa-python
-BuildRequires : enum34-python
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : pyasn1
@@ -27,8 +28,6 @@ BuildRequires : pycrypto-python
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
 
 %description
 ========
@@ -43,7 +42,6 @@ Paramiko
 %package python
 Summary: python components for the paramiko package.
 Group: Default
-Requires: cryptography
 
 %description python
 python components for the paramiko package.
@@ -54,7 +52,7 @@ python components for the paramiko package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487701840
+export SOURCE_DATE_EPOCH=1489263523
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -64,7 +62,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python test.py
 %install
-export SOURCE_DATE_EPOCH=1487701840
+export SOURCE_DATE_EPOCH=1489263523
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
