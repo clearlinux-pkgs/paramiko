@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : paramiko
-Version  : 2.1.2
-Release  : 26
-URL      : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz
-Source0  : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz
-Source99 : http://pypi.debian.net/paramiko/paramiko-2.1.2.tar.gz.asc
+Version  : 2.1.3
+Release  : 27
+URL      : http://pypi.debian.net/paramiko/paramiko-2.1.3.tar.gz
+Source0  : http://pypi.debian.net/paramiko/paramiko-2.1.3.tar.gz
+Source99 : http://pypi.debian.net/paramiko/paramiko-2.1.3.tar.gz.asc
 Summary  : SSH2 protocol library
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -36,8 +36,8 @@ Paramiko
 .. Continuous integration and code coverage badges
 .. image:: https://travis-ci.org/paramiko/paramiko.svg?branch=master
 :target: https://travis-ci.org/paramiko/paramiko
-.. image:: https://coveralls.io/repos/paramiko/paramiko/badge.svg?branch=master&service=github
-:target: https://coveralls.io/github/paramiko/paramiko?branch=master
+.. image:: https://codecov.io/gh/paramiko/paramiko/branch/master/graph/badge.svg
+:target: https://codecov.io/gh/paramiko/paramiko
 
 %package python
 Summary: python components for the paramiko package.
@@ -48,11 +48,14 @@ python components for the paramiko package.
 
 
 %prep
-%setup -q -n paramiko-2.1.2
+%setup -q -n paramiko-2.1.3
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1489263523
+export SOURCE_DATE_EPOCH=1497047626
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -62,14 +65,18 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python test.py
 %install
-export SOURCE_DATE_EPOCH=1489263523
+export SOURCE_DATE_EPOCH=1497047626
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
