@@ -6,7 +6,7 @@
 #
 Name     : paramiko
 Version  : 2.2.1
-Release  : 32
+Release  : 33
 URL      : http://pypi.debian.net/paramiko/paramiko-2.2.1.tar.gz
 Source0  : http://pypi.debian.net/paramiko/paramiko-2.2.1.tar.gz
 Source99 : http://pypi.debian.net/paramiko/paramiko-2.2.1.tar.gz.asc
