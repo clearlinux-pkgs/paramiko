@@ -1,5 +1,5 @@
 PKG_NAME := paramiko
-URL := http://pypi.debian.net/paramiko/paramiko-2.2.1.tar.gz
-
+URL = https://github.com/paramiko/paramiko/archive/2.4.1.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common
