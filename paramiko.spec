@@ -4,13 +4,12 @@
 #
 Name     : paramiko
 Version  : 2.4.1
-Release  : 36
+Release  : 37
 URL      : https://github.com/paramiko/paramiko/archive/2.4.1.tar.gz
 Source0  : https://github.com/paramiko/paramiko/archive/2.4.1.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
-Requires: paramiko-legacypython
 Requires: paramiko-python3
 Requires: paramiko-python
 Requires: bcrypt
@@ -43,15 +42,6 @@ Paramiko
 .. image:: https://codecov.io/gh/paramiko/paramiko/branch/master/graph/badge.svg
 :target: https://codecov.io/gh/paramiko/paramiko
 
-%package legacypython
-Summary: legacypython components for the paramiko package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the paramiko package.
-
-
 %package python
 Summary: python components for the paramiko package.
 Group: Default
@@ -78,25 +68,18 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521669189
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1523296058
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1521669189
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
