@@ -6,5 +6,4 @@ cryptography
 pyasn1
 pyasn1-modules
 cffi
-setuptools-legacypython
 setuptools-python
