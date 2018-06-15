@@ -4,7 +4,7 @@
 #
 Name     : paramiko
 Version  : 2.4.1
-Release  : 40
+Release  : 41
 URL      : https://github.com/paramiko/paramiko/archive/2.4.1.tar.gz
 Source0  : https://github.com/paramiko/paramiko/archive/2.4.1.tar.gz
 Summary  : No detailed summary available
