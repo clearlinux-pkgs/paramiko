@@ -3,3 +3,4 @@
 cryptography.hazmat.backends-python
 pyasn1.type.univ-python
 _cffi_backend-python
+pynacl
