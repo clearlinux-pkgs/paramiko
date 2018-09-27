@@ -4,7 +4,7 @@
 #
 Name     : paramiko
 Version  : 2.4.1
-Release  : 47
+Release  : 48
 URL      : https://github.com/paramiko/paramiko/archive/2.4.1.tar.gz
 Source0  : https://github.com/paramiko/paramiko/archive/2.4.1.tar.gz
 Summary  : No detailed summary available
@@ -17,7 +17,6 @@ Requires: PyNaCl
 Requires: bcrypt
 Requires: cryptography
 Requires: pyasn1
-Requires: pynacl
 BuildRequires : PyNaCl
 BuildRequires : bcrypt
 BuildRequires : buildreq-distutils3
@@ -73,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538060112
+export SOURCE_DATE_EPOCH=1538060288
 python3 setup.py build
 
 %install
