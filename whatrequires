@@ -1,3 +1,14 @@
 # This file contains recursive sources that require this package
+ansible
+cinder
+docker-compose
+docker-py
+mercurial
+nova
 os-xenapi
 python-hwinfo
+sahara
+spyder-ide
+suitable
+tempest
+tempest-lib
