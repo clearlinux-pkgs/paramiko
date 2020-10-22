@@ -1,14 +1,12 @@
 # This file contains recursive sources that require this package
 ansible
-cinder
+azure-cli
+azure-cli-core
 docker-compose
 docker-py
+fabric
 mercurial
-nova
-os-xenapi
 python-hwinfo
-sahara
+scp
 spyder-ide
-suitable
-tempest
-tempest-lib
+sshtunnel
