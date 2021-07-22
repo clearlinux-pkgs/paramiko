@@ -4,7 +4,7 @@
 #
 Name     : paramiko
 Version  : 2.4.2
-Release  : 66
+Release  : 67
 URL      : https://github.com/paramiko/paramiko/archive/2.4.2.tar.gz
 Source0  : https://github.com/paramiko/paramiko/archive/2.4.2.tar.gz
 Summary  : SSH2 protocol library
